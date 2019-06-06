@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency-Converter", "Currency-Converter\Currency-Converter.csproj", "{97432F9C-A198-40D5-A05F-EA4CE3BD3A79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointAndRectangle", "PointAndRectangle\PointAndRectangle.csproj", "{BC4E5F35-A63F-4530-B2D7-365BE41355F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{97432F9C-A198-40D5-A05F-EA4CE3BD3A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97432F9C-A198-40D5-A05F-EA4CE3BD3A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97432F9C-A198-40D5-A05F-EA4CE3BD3A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4E5F35-A63F-4530-B2D7-365BE41355F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4E5F35-A63F-4530-B2D7-365BE41355F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4E5F35-A63F-4530-B2D7-365BE41355F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4E5F35-A63F-4530-B2D7-365BE41355F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
