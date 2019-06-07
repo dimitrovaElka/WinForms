@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmacyApp", "PharmacyApp\PharmacyApp.csproj", "{438A25D1-B9BB-4D8E-9A0D-7F1F04A25B74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.Models", "Pharmacy.Models\Pharmacy.Models.csproj", "{CCE7985F-64FB-4D8E-8903-67E85962BE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy.Data", "Pharmacy.Data\Pharmacy.Data.csproj", "{35EAADFE-5B34-4C4D-A9F5-CAEE843E0B69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{438A25D1-B9BB-4D8E-9A0D-7F1F04A25B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438A25D1-B9BB-4D8E-9A0D-7F1F04A25B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438A25D1-B9BB-4D8E-9A0D-7F1F04A25B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE7985F-64FB-4D8E-8903-67E85962BE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE7985F-64FB-4D8E-8903-67E85962BE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE7985F-64FB-4D8E-8903-67E85962BE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE7985F-64FB-4D8E-8903-67E85962BE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35EAADFE-5B34-4C4D-A9F5-CAEE843E0B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EAADFE-5B34-4C4D-A9F5-CAEE843E0B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EAADFE-5B34-4C4D-A9F5-CAEE843E0B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EAADFE-5B34-4C4D-A9F5-CAEE843E0B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

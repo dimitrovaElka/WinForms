@@ -20,11 +20,26 @@ namespace PharmacyApp
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nark2016DataSet.listPharmacy' table. You can move, or remove it, as needed.
-            this.listPharmacyTableAdapter.Fill(this.nark2016DataSet.listPharmacy);
+            // this.listPharmacyTableAdapter.Fill(this.nark2016DataSet.listPharmacy);
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonTransferOfStocks_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPharmacyReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSummarizedReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
         {
 
         }
