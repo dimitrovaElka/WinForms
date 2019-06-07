@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PharmacyApp
 {
-    public partial class FormApplication2 : Form
+    public partial class FormApplication2 : System.Windows.Forms.Form
     {
         public FormApplication2()
         {

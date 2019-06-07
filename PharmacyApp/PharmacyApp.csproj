@@ -135,6 +135,12 @@
     <Compile Include="FormApplication2.Designer.cs">
       <DependentUpon>FormApplication2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPharmacy.Designer.cs">
+      <DependentUpon>FormPharmacy.cs</DependentUpon>
+    </Compile>
     <Compile Include="nark2016DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +150,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormApplication2.resx">
       <DependentUpon>FormApplication2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPharmacy.resx">
+      <DependentUpon>FormPharmacy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,6 +193,9 @@
       <Project>{35eaadfe-5b34-4c4d-a9f5-caee843e0b69}</Project>
       <Name>Pharmacy.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
