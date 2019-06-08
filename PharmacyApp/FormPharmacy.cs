@@ -16,5 +16,12 @@ namespace PharmacyApp
         {
             InitializeComponent();
         }
+
+        private void FormPharmacy_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pharmacyWinFormsDataSet.Pharmacies' table. You can move, or remove it, as needed.
+            this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet.Pharmacies);
+
+        }
     }
 }

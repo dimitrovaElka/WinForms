@@ -146,6 +146,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PharmacyWinFormsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PharmacyWinFormsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyWinFormsDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormApplication2.resx">
@@ -175,6 +186,31 @@
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PharmacyWinFormsDataSet.xsc">
+      <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PharmacyWinFormsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmacyWinFormsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PharmacyWinFormsDataSet.xss">
+      <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PharmacyWinFormsDataSet1.xsc">
+      <DependentUpon>PharmacyWinFormsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PharmacyWinFormsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmacyWinFormsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmacyWinFormsDataSet1.xss">
+      <DependentUpon>PharmacyWinFormsDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -32,5 +32,16 @@ namespace PharmacyApp.Properties {
                 return ((string)(this["nark2016ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-B5L5465;Initial Catalog=PharmacyWinForms;Integrated Security=" +
+            "True")]
+        public string PharmacyWinFormsConnectionString {
+            get {
+                return ((string)(this["PharmacyWinFormsConnectionString"]));
+            }
+        }
     }
 }

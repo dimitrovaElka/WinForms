@@ -17,8 +17,16 @@ namespace PharmacyApp
             InitializeComponent();
         }
 
+        private void buttonAddPharm_Click(Object sender, EventArgs e)
+        {
+            var myForm = new FormPharmacy();
+            myForm.Show();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pharmacyWinFormsDataSet1.Pharmacies' table. You can move, or remove it, as needed.
+            this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet1.Pharmacies);
             // TODO: This line of code loads data into the 'nark2016DataSet.listPharmacy' table. You can move, or remove it, as needed.
             // this.listPharmacyTableAdapter.Fill(this.nark2016DataSet.listPharmacy);
 
@@ -41,7 +49,7 @@ namespace PharmacyApp
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

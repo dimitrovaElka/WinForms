@@ -42,10 +42,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxPharmacy = new System.Windows.Forms.ComboBox();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonAddPharm = new System.Windows.Forms.Button();
+            this.pharmacyWinFormsDataSet1 = new PharmacyApp.PharmacyWinFormsDataSet1();
+            this.pharmaciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pharmaciesTableAdapter = new PharmacyApp.PharmacyWinFormsDataSet1TableAdapters.PharmaciesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.listPharmacyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nark2016DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuarter)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listPharmacyBindingSource
@@ -160,16 +166,16 @@
             // 
             // comboBoxPharmacy
             // 
+            this.comboBoxPharmacy.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.pharmaciesBindingSource, "Name", true));
+            this.comboBoxPharmacy.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pharmaciesBindingSource, "Id", true));
+            this.comboBoxPharmacy.DataSource = this.pharmaciesBindingSource;
+            this.comboBoxPharmacy.DisplayMember = "Name";
             this.comboBoxPharmacy.FormattingEnabled = true;
-            this.comboBoxPharmacy.Items.AddRange(new object[] {
-            "Аптека 1",
-            "Аптека 2",
-            "Аптека 3",
-            "Аптека 4"});
             this.comboBoxPharmacy.Location = new System.Drawing.Point(449, 60);
             this.comboBoxPharmacy.Name = "comboBoxPharmacy";
             this.comboBoxPharmacy.Size = new System.Drawing.Size(347, 28);
             this.comboBoxPharmacy.TabIndex = 5;
+            this.comboBoxPharmacy.ValueMember = "Id";
             // 
             // buttonExit
             // 
@@ -181,6 +187,30 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // buttonAddPharm
+            // 
+            this.buttonAddPharm.Location = new System.Drawing.Point(48, 319);
+            this.buttonAddPharm.Name = "buttonAddPharm";
+            this.buttonAddPharm.Size = new System.Drawing.Size(183, 44);
+            this.buttonAddPharm.TabIndex = 7;
+            this.buttonAddPharm.Text = "Аптеки";
+            this.buttonAddPharm.UseVisualStyleBackColor = true;
+            this.buttonAddPharm.Click += new System.EventHandler(this.buttonAddPharm_Click);
+            // 
+            // pharmacyWinFormsDataSet1
+            // 
+            this.pharmacyWinFormsDataSet1.DataSetName = "PharmacyWinFormsDataSet1";
+            this.pharmacyWinFormsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pharmaciesBindingSource
+            // 
+            this.pharmaciesBindingSource.DataMember = "Pharmacies";
+            this.pharmaciesBindingSource.DataSource = this.pharmacyWinFormsDataSet1;
+            // 
+            // pharmaciesTableAdapter
+            // 
+            this.pharmaciesTableAdapter.ClearBeforeFill = true;
+            // 
             // FormApplication2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -188,6 +218,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(825, 385);
+            this.Controls.Add(this.buttonAddPharm);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.comboBoxPharmacy);
             this.Controls.Add(this.label3);
@@ -205,6 +236,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nark2016DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuarter)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +257,10 @@
         private System.Windows.Forms.Button buttonPharmacyReport;
         private System.Windows.Forms.Button buttonTransferOfStocks;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonAddPharm;
+        private PharmacyWinFormsDataSet1 pharmacyWinFormsDataSet1;
+        private System.Windows.Forms.BindingSource pharmaciesBindingSource;
+        private PharmacyWinFormsDataSet1TableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
     }
 }
 
