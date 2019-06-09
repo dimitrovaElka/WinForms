@@ -23,5 +23,21 @@ namespace PharmacyApp
             this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet.Pharmacies);
 
         }
+
+        private void toolStripButtonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.pharmaciesBindingSource.EndEdit();
+                this.pharmaciesTableAdapter.Update(this.pharmacyWinFormsDataSet.Pharmacies);
+                MessageBox.Show("Pharmacy updated...");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }
