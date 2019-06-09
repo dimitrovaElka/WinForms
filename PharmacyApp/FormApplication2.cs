@@ -26,7 +26,7 @@ namespace PharmacyApp
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pharmacyWinFormsDataSet1.Pharmacies' table. You can move, or remove it, as needed.
-            this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet1.Pharmacies);
+            this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet.Pharmacies);
             // TODO: This line of code loads data into the 'nark2016DataSet.listPharmacy' table. You can move, or remove it, as needed.
             // this.listPharmacyTableAdapter.Fill(this.nark2016DataSet.listPharmacy);
 

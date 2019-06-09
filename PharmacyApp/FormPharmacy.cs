@@ -21,7 +21,6 @@ namespace PharmacyApp
         {
             // TODO: This line of code loads data into the 'pharmacyWinFormsDataSet.Pharmacies' table. You can move, or remove it, as needed.
             this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet.Pharmacies);
-
         }
 
         private void toolStripButtonUpdate_Click(object sender, EventArgs e)
@@ -39,5 +38,18 @@ namespace PharmacyApp
             }
             
         }
+
+        //private void fillByToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        this.pharmaciesTableAdapter.FillBy(this.pharmacyWinFormsDataSet.Pharmacies);
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        System.Windows.Forms.MessageBox.Show(ex.Message);
+        //    }
+
+        //}
     }
 }

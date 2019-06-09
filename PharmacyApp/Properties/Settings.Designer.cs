@@ -43,5 +43,17 @@ namespace PharmacyApp.Properties {
                 return ((string)(this["PharmacyWinFormsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Pharmacies")]
+        public string proba {
+            get {
+                return ((string)(this["proba"]));
+            }
+            set {
+                this["proba"] = value;
+            }
+        }
     }
 }

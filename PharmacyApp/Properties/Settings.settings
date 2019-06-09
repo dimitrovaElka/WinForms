@@ -18,5 +18,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-B5L5465;Initial Catalog=PharmacyWinForms;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="proba" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pharmacies</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

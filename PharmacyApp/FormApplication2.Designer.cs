@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listPharmacyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nark2016DataSet = new PharmacyApp.nark2016DataSet();
-            this.listPharmacyTableAdapter = new PharmacyApp.nark2016DataSetTableAdapters.listPharmacyTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownQuarter = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,32 +38,16 @@
             this.buttonTransferOfStocks = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxPharmacy = new System.Windows.Forms.ComboBox();
+            this.pharmaciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pharmacyWinFormsDataSet = new PharmacyApp.PharmacyWinFormsDataSet();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonAddPharm = new System.Windows.Forms.Button();
-            this.pharmacyWinFormsDataSet1 = new PharmacyApp.PharmacyWinFormsDataSet1();
-            this.pharmaciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pharmaciesTableAdapter = new PharmacyApp.PharmacyWinFormsDataSet1TableAdapters.PharmaciesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.listPharmacyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nark2016DataSet)).BeginInit();
+            this.pharmaciesTableAdapter = new PharmacyApp.PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuarter)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listPharmacyBindingSource
-            // 
-            this.listPharmacyBindingSource.DataMember = "listPharmacy";
-            this.listPharmacyBindingSource.DataSource = this.nark2016DataSet;
-            // 
-            // nark2016DataSet
-            // 
-            this.nark2016DataSet.DataSetName = "nark2016DataSet";
-            this.nark2016DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listPharmacyTableAdapter
-            // 
-            this.listPharmacyTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -166,8 +147,6 @@
             // 
             // comboBoxPharmacy
             // 
-            this.comboBoxPharmacy.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.pharmaciesBindingSource, "Name", true));
-            this.comboBoxPharmacy.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pharmaciesBindingSource, "Id", true));
             this.comboBoxPharmacy.DataSource = this.pharmaciesBindingSource;
             this.comboBoxPharmacy.DisplayMember = "Name";
             this.comboBoxPharmacy.FormattingEnabled = true;
@@ -176,6 +155,16 @@
             this.comboBoxPharmacy.Size = new System.Drawing.Size(347, 28);
             this.comboBoxPharmacy.TabIndex = 5;
             this.comboBoxPharmacy.ValueMember = "Id";
+            // 
+            // pharmaciesBindingSource
+            // 
+            this.pharmaciesBindingSource.DataMember = "Pharmacies";
+            this.pharmaciesBindingSource.DataSource = this.pharmacyWinFormsDataSet;
+            // 
+            // pharmacyWinFormsDataSet
+            // 
+            this.pharmacyWinFormsDataSet.DataSetName = "PharmacyWinFormsDataSet";
+            this.pharmacyWinFormsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonExit
             // 
@@ -196,16 +185,6 @@
             this.buttonAddPharm.Text = "Аптеки";
             this.buttonAddPharm.UseVisualStyleBackColor = true;
             this.buttonAddPharm.Click += new System.EventHandler(this.buttonAddPharm_Click);
-            // 
-            // pharmacyWinFormsDataSet1
-            // 
-            this.pharmacyWinFormsDataSet1.DataSetName = "PharmacyWinFormsDataSet1";
-            this.pharmacyWinFormsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pharmaciesBindingSource
-            // 
-            this.pharmaciesBindingSource.DataMember = "Pharmacies";
-            this.pharmaciesBindingSource.DataSource = this.pharmacyWinFormsDataSet1;
             // 
             // pharmaciesTableAdapter
             // 
@@ -232,21 +211,16 @@
             this.Name = "FormApplication2";
             this.Text = "Приложение 2";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listPharmacyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nark2016DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuarter)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmacyWinFormsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private nark2016DataSet nark2016DataSet;
-        private System.Windows.Forms.BindingSource listPharmacyBindingSource;
-        private nark2016DataSetTableAdapters.listPharmacyTableAdapter listPharmacyTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDownQuarter;
         private System.Windows.Forms.Label label2;
@@ -258,9 +232,9 @@
         private System.Windows.Forms.Button buttonTransferOfStocks;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonAddPharm;
-        private PharmacyWinFormsDataSet1 pharmacyWinFormsDataSet1;
+        private PharmacyWinFormsDataSet pharmacyWinFormsDataSet;
         private System.Windows.Forms.BindingSource pharmaciesBindingSource;
-        private PharmacyWinFormsDataSet1TableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
+        private PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
     }
 }
 
