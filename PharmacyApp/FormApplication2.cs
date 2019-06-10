@@ -23,6 +23,12 @@ namespace PharmacyApp
             myForm.Show();
         }
 
+        private void buttonNark_Click(Object sender, EventArgs e)
+        {
+            var drugsForm = new FormDrugs();
+            drugsForm.Show();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pharmacyWinFormsDataSet1.Pharmacies' table. You can move, or remove it, as needed.

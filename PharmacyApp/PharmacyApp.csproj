@@ -129,6 +129,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrugsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrugsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormApplication2.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -137,6 +142,12 @@
       <DependentUpon>FormApplication2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="FormDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDrugs.Designer.cs">
+      <DependentUpon>FormDrugs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPharmacy.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -144,6 +155,11 @@
     <Compile Include="FormPharmacy.Designer.cs">
       <DependentUpon>FormPharmacy.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="GenericDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenericDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="nark2016DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -165,6 +181,9 @@
       <DependentUpon>FormApplication2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDrugs.resx">
+      <DependentUpon>FormDrugs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPharmacy.resx">
       <DependentUpon>FormPharmacy.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -179,6 +198,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DrugsDataSet.xsc">
+      <DependentUpon>DrugsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DrugsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DrugsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DrugsDataSet.xss">
+      <DependentUpon>DrugsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GenericDataSet.xsc">
+      <DependentUpon>GenericDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GenericDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenericDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GenericDataSet.xss">
+      <DependentUpon>GenericDataSet.xsd</DependentUpon>
+    </None>
     <None Include="nark2016DataSet.xsc">
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </None>

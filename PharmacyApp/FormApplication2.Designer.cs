@@ -43,6 +43,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonAddPharm = new System.Windows.Forms.Button();
             this.pharmaciesTableAdapter = new PharmacyApp.PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter();
+            this.buttonNark = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuarter)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).BeginInit();
@@ -168,9 +169,9 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(669, 321);
+            this.buttonExit.Location = new System.Drawing.Point(613, 319);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(127, 34);
+            this.buttonExit.Size = new System.Drawing.Size(183, 44);
             this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Изход";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -190,6 +191,16 @@
             // 
             this.pharmaciesTableAdapter.ClearBeforeFill = true;
             // 
+            // buttonNark
+            // 
+            this.buttonNark.Location = new System.Drawing.Point(268, 319);
+            this.buttonNark.Name = "buttonNark";
+            this.buttonNark.Size = new System.Drawing.Size(183, 44);
+            this.buttonNark.TabIndex = 8;
+            this.buttonNark.Text = "Медикаменти";
+            this.buttonNark.UseVisualStyleBackColor = true;
+            this.buttonNark.Click += new System.EventHandler(this.buttonNark_Click);
+            // 
             // FormApplication2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -197,6 +208,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(825, 385);
+            this.Controls.Add(this.buttonNark);
             this.Controls.Add(this.buttonAddPharm);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.comboBoxPharmacy);
@@ -235,6 +247,7 @@
         private PharmacyWinFormsDataSet pharmacyWinFormsDataSet;
         private System.Windows.Forms.BindingSource pharmaciesBindingSource;
         private PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
+        private System.Windows.Forms.Button buttonNark;
     }
 }
 
