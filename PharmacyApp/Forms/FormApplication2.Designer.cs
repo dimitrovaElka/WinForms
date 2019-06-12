@@ -86,6 +86,7 @@ namespace PharmacyApp
             0,
             0,
             0});
+            this.numericUpDownQuarter.ValueChanged += new System.EventHandler(this.numericUpDownQuarter_ValueChanged);
             // 
             // label2
             // 
@@ -158,6 +159,7 @@ namespace PharmacyApp
             this.comboBoxPharmacy.Size = new System.Drawing.Size(347, 28);
             this.comboBoxPharmacy.TabIndex = 5;
             this.comboBoxPharmacy.ValueMember = "Id";
+            this.comboBoxPharmacy.VisibleChanged += new System.EventHandler(this.comboBoxPharmacy_ValueChanged);
             // 
             // pharmaciesBindingSource
             // 

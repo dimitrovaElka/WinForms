@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyApp.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +36,7 @@ namespace PharmacyApp
             this.pharmaciesTableAdapter.Fill(this.pharmacyWinFormsDataSet.Pharmacies);
             // TODO: This line of code loads data into the 'nark2016DataSet.listPharmacy' table. You can move, or remove it, as needed.
             // this.listPharmacyTableAdapter.Fill(this.nark2016DataSet.listPharmacy);
-
+           
         }
 
         private void buttonTransferOfStocks_Click(object sender, EventArgs e)
@@ -45,7 +46,26 @@ namespace PharmacyApp
 
         private void buttonPharmacyReport_Click(object sender, EventArgs e)
         {
+            var pharmReport = new FormDrugsReport();
+            pharmReport.Show();
+        }
 
+        private void comboBoxPharmacy_ValueChanged(object sender, EventArgs e)
+        {
+            AddReportForThisPharmacy();
+        }
+
+        private void numericUpDownQuarter_ValueChanged(object sender, EventArgs e)
+        {
+            AddReportForThisPharmacy();
+        }
+
+        private void AddReportForThisPharmacy()
+        {
+            var quarter = (int)this.numericUpDownQuarter.Value;
+            var pharmacy = this.comboBoxPharmacy.ValueMember;
+
+            // TODO send as parameters to FormDrugsReport
         }
 
         private void buttonSummarizedReport_Click(object sender, EventArgs e)

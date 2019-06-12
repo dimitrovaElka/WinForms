@@ -134,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DrugsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DrugsReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DrugsReportDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormApplication2.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -147,6 +152,12 @@
     </Compile>
     <Compile Include="Forms\FormDrugs.Designer.cs">
       <DependentUpon>FormDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDrugsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDrugsReport.Designer.cs">
+      <DependentUpon>FormDrugsReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormPharmacy.cs">
       <SubType>Form</SubType>
@@ -183,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDrugs.resx">
       <DependentUpon>FormDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDrugsReport.resx">
+      <DependentUpon>FormDrugsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPharmacy.resx">
       <DependentUpon>FormPharmacy.cs</DependentUpon>
@@ -230,6 +244,17 @@
     </None>
     <None Include="DataSets\nark2016DataSet.xss">
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DrugsReportDataSet.xsc">
+      <DependentUpon>DrugsReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DrugsReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DrugsReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DrugsReportDataSet.xss">
+      <DependentUpon>DrugsReportDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="DataSets\PharmacyWinFormsDataSet.xsc">
