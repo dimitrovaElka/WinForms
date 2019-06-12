@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PharmacyApp {
+namespace PharmacyApp.DataSets {
     
     
     /// <summary>
@@ -767,7 +767,7 @@ namespace PharmacyApp {
         }
     }
 }
-namespace PharmacyApp.PharmacyWinFormsDataSetTableAdapters {
+namespace PharmacyApp.DataSets.PharmacyWinFormsDataSetTableAdapters {
     
     
     /// <summary>

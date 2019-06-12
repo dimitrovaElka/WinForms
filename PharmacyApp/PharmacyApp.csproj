@@ -129,47 +129,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrugsDataSet.Designer.cs">
+    <Compile Include="DataSets\DrugsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DrugsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormApplication2.cs">
+    <Compile Include="Forms\FormApplication2.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="FormApplication2.Designer.cs">
+    <Compile Include="Forms\FormApplication2.Designer.cs">
       <DependentUpon>FormApplication2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="FormDrugs.cs">
+    <Compile Include="Forms\FormDrugs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDrugs.Designer.cs">
+    <Compile Include="Forms\FormDrugs.Designer.cs">
       <DependentUpon>FormDrugs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPharmacy.cs">
+    <Compile Include="Forms\FormPharmacy.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="FormPharmacy.Designer.cs">
+    <Compile Include="Forms\FormPharmacy.Designer.cs">
       <DependentUpon>FormPharmacy.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="GenericDataSet.Designer.cs">
+    <Compile Include="DataSets\GenericDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GenericDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="nark2016DataSet.Designer.cs">
+    <Compile Include="DataSets\nark2016DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PharmacyWinFormsDataSet.cs">
+    <Compile Include="DataSets\PharmacyWinFormsDataSet.cs">
       <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PharmacyWinFormsDataSet.Designer.cs">
+    <Compile Include="DataSets\PharmacyWinFormsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
@@ -177,14 +177,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormApplication2.resx">
+    <EmbeddedResource Include="Forms\FormApplication2.resx">
       <DependentUpon>FormApplication2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDrugs.resx">
+    <EmbeddedResource Include="Forms\FormDrugs.resx">
       <DependentUpon>FormDrugs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPharmacy.resx">
+    <EmbeddedResource Include="Forms\FormPharmacy.resx">
       <DependentUpon>FormPharmacy.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -198,51 +198,51 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DrugsDataSet.xsc">
+    <None Include="DataSets\DrugsDataSet.xsc">
       <DependentUpon>DrugsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DrugsDataSet.xsd">
+    <None Include="DataSets\DrugsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DrugsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DrugsDataSet.xss">
+    <None Include="DataSets\DrugsDataSet.xss">
       <DependentUpon>DrugsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="GenericDataSet.xsc">
+    <None Include="DataSets\GenericDataSet.xsc">
       <DependentUpon>GenericDataSet.xsd</DependentUpon>
     </None>
-    <None Include="GenericDataSet.xsd">
+    <None Include="DataSets\GenericDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>GenericDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="GenericDataSet.xss">
+    <None Include="DataSets\GenericDataSet.xss">
       <DependentUpon>GenericDataSet.xsd</DependentUpon>
     </None>
-    <None Include="nark2016DataSet.xsc">
+    <None Include="DataSets\nark2016DataSet.xsc">
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </None>
-    <None Include="nark2016DataSet.xsd">
+    <None Include="DataSets\nark2016DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>nark2016DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="nark2016DataSet.xss">
+    <None Include="DataSets\nark2016DataSet.xss">
       <DependentUpon>nark2016DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="PharmacyWinFormsDataSet.xsc">
+    <None Include="DataSets\PharmacyWinFormsDataSet.xsc">
       <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PharmacyWinFormsDataSet.xsd">
+    <None Include="DataSets\PharmacyWinFormsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PharmacyWinFormsDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PharmacyWinFormsDataSet.xss">
+    <None Include="DataSets\PharmacyWinFormsDataSet.xss">
       <DependentUpon>PharmacyWinFormsDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

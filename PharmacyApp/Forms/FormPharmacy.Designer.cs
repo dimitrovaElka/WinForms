@@ -1,4 +1,6 @@
-﻿namespace PharmacyApp
+﻿using PharmacyApp.DataSets;
+
+namespace PharmacyApp
 {
     partial class FormPharmacy
     {
@@ -44,7 +46,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonUpdate = new System.Windows.Forms.ToolStripButton();
-            this.pharmacyWinFormsDataSet = new PharmacyApp.PharmacyWinFormsDataSet();
+            this.pharmacyWinFormsDataSet = new PharmacyApp.DataSets.PharmacyWinFormsDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewPharmacies = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +54,7 @@
             this.pharmacyLicenseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugsLicenseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmaciesTableAdapter = new PharmacyApp.PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter();
+            this.pharmaciesTableAdapter = new PharmacyApp.DataSets.PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorPharm)).BeginInit();
             this.bindingNavigatorPharm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pharmaciesBindingSource)).BeginInit();
@@ -283,7 +285,7 @@
 
         #endregion
         private PharmacyWinFormsDataSet pharmacyWinFormsDataSet;
-        private PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
+        private DataSets.PharmacyWinFormsDataSetTableAdapters.PharmaciesTableAdapter pharmaciesTableAdapter;
         private System.Windows.Forms.BindingSource pharmaciesBindingSource;
         private System.Windows.Forms.BindingNavigator bindingNavigatorPharm;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;

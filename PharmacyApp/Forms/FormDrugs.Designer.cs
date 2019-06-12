@@ -1,4 +1,6 @@
-﻿namespace PharmacyApp
+﻿using PharmacyApp.DataSets;
+
+namespace PharmacyApp
 {
     partial class FormDrugs
     {
@@ -31,39 +33,40 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDrugs));
             this.bindingNavigatorDrugs = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.drugMedicamentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.drugsDataSet = new PharmacyApp.DataSets.DrugsDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonUpdDrugs = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewDrugs = new System.Windows.Forms.DataGridView();
-            this.drugsDataSet = new PharmacyApp.DrugsDataSet();
-            this.drugMedicamentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drugMedicamentsTableAdapter = new PharmacyApp.DrugsDataSetTableAdapters.DrugMedicamentsTableAdapter();
-            this.genericDataSet = new PharmacyApp.GenericDataSet();
-            this.genericMedicamentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genericMedicamentsTableAdapter = new PharmacyApp.GenericDataSetTableAdapters.GenericMedicamentsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tradeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genericIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.genericMedicamentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genericDataSet = new PharmacyApp.DataSets.GenericDataSet();
             this.measureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.packingContentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButtonUpdDrugs = new System.Windows.Forms.ToolStripButton();
+            this.drugMedicamentsTableAdapter = new PharmacyApp.DataSets.DrugsDataSetTableAdapters.DrugMedicamentsTableAdapter();
+            this.genericMedicamentsTableAdapter = new PharmacyApp.DataSets.GenericDataSetTableAdapters.GenericMedicamentsTableAdapter();
+            this.toolStripButtonExit = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDrugs)).BeginInit();
             this.bindingNavigatorDrugs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drugMedicamentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugsDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrugs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugMedicamentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genericDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genericMedicamentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genericDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigatorDrugs
@@ -84,7 +87,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.toolStripButtonUpdDrugs});
+            this.toolStripButtonUpdDrugs,
+            this.toolStripButtonExit});
             this.bindingNavigatorDrugs.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigatorDrugs.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorDrugs.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -96,37 +100,6 @@
             this.bindingNavigatorDrugs.TabIndex = 0;
             this.bindingNavigatorDrugs.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -135,6 +108,23 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // drugMedicamentsBindingSource
+            // 
+            this.drugMedicamentsBindingSource.DataMember = "DrugMedicaments";
+            this.drugMedicamentsBindingSource.DataSource = this.drugsDataSet;
+            // 
+            // drugsDataSet
+            // 
+            this.drugsDataSet.DataSetName = "DrugsDataSet";
+            this.drugsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -163,6 +153,25 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -180,6 +189,21 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonUpdDrugs
+            // 
+            this.toolStripButtonUpdDrugs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonUpdDrugs.Image = global::PharmacyApp.Properties.Resources.update;
+            this.toolStripButtonUpdDrugs.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUpdDrugs.Name = "toolStripButtonUpdDrugs";
+            this.toolStripButtonUpdDrugs.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonUpdDrugs.Text = "Update";
+            this.toolStripButtonUpdDrugs.Click += new System.EventHandler(this.toolStripButtonUpdDrugs_Click);
             // 
             // panel1
             // 
@@ -207,34 +231,6 @@
             this.dataGridViewDrugs.Size = new System.Drawing.Size(798, 410);
             this.dataGridViewDrugs.TabIndex = 0;
             // 
-            // drugsDataSet
-            // 
-            this.drugsDataSet.DataSetName = "DrugsDataSet";
-            this.drugsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // drugMedicamentsBindingSource
-            // 
-            this.drugMedicamentsBindingSource.DataMember = "DrugMedicaments";
-            this.drugMedicamentsBindingSource.DataSource = this.drugsDataSet;
-            // 
-            // drugMedicamentsTableAdapter
-            // 
-            this.drugMedicamentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // genericDataSet
-            // 
-            this.genericDataSet.DataSetName = "GenericDataSet";
-            this.genericDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // genericMedicamentsBindingSource
-            // 
-            this.genericMedicamentsBindingSource.DataMember = "GenericMedicaments";
-            this.genericMedicamentsBindingSource.DataSource = this.genericDataSet;
-            // 
-            // genericMedicamentsTableAdapter
-            // 
-            this.genericMedicamentsTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -259,6 +255,16 @@
             this.genericIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.genericIdDataGridViewTextBoxColumn.ValueMember = "Id";
             // 
+            // genericMedicamentsBindingSource
+            // 
+            this.genericMedicamentsBindingSource.DataMember = "GenericMedicaments";
+            this.genericMedicamentsBindingSource.DataSource = this.genericDataSet;
+            // 
+            // genericDataSet
+            // 
+            this.genericDataSet.DataSetName = "GenericDataSet";
+            this.genericDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // measureDataGridViewTextBoxColumn
             // 
             this.measureDataGridViewTextBoxColumn.DataPropertyName = "Measure";
@@ -271,15 +277,23 @@
             this.packingContentDataGridViewTextBoxColumn.HeaderText = "PackingContent";
             this.packingContentDataGridViewTextBoxColumn.Name = "packingContentDataGridViewTextBoxColumn";
             // 
-            // toolStripButtonUpdDrugs
+            // drugMedicamentsTableAdapter
             // 
-            this.toolStripButtonUpdDrugs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonUpdDrugs.Image = global::PharmacyApp.Properties.Resources.update;
-            this.toolStripButtonUpdDrugs.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonUpdDrugs.Name = "toolStripButtonUpdDrugs";
-            this.toolStripButtonUpdDrugs.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonUpdDrugs.Text = "Update";
-            this.toolStripButtonUpdDrugs.Click += new System.EventHandler(this.toolStripButtonUpdDrugs_Click);
+            this.drugMedicamentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // genericMedicamentsTableAdapter
+            // 
+            this.genericMedicamentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButtonExit
+            // 
+            this.toolStripButtonExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonExit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonExit.Image")));
+            this.toolStripButtonExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonExit.Name = "toolStripButtonExit";
+            this.toolStripButtonExit.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonExit.Text = "Exit";
+            this.toolStripButtonExit.Click += new System.EventHandler(this.buttonExitDrugs_Click);
             // 
             // FormDrugs
             // 
@@ -294,12 +308,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorDrugs)).EndInit();
             this.bindingNavigatorDrugs.ResumeLayout(false);
             this.bindingNavigatorDrugs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drugMedicamentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugsDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrugs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugMedicamentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genericDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genericMedicamentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genericDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,15 +337,16 @@
         private System.Windows.Forms.DataGridView dataGridViewDrugs;
         private DrugsDataSet drugsDataSet;
         private System.Windows.Forms.BindingSource drugMedicamentsBindingSource;
-        private DrugsDataSetTableAdapters.DrugMedicamentsTableAdapter drugMedicamentsTableAdapter;
+        private DataSets.DrugsDataSetTableAdapters.DrugMedicamentsTableAdapter drugMedicamentsTableAdapter;
         private GenericDataSet genericDataSet;
         private System.Windows.Forms.BindingSource genericMedicamentsBindingSource;
-        private GenericDataSetTableAdapters.GenericMedicamentsTableAdapter genericMedicamentsTableAdapter;
+        private DataSets.GenericDataSetTableAdapters.GenericMedicamentsTableAdapter genericMedicamentsTableAdapter;
         private System.Windows.Forms.ToolStripButton toolStripButtonUpdDrugs;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tradeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn genericIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn measureDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn packingContentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButtonExit;
     }
 }

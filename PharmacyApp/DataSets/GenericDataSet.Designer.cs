@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PharmacyApp {
+namespace PharmacyApp.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace PharmacyApp {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DrugsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GenericDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DrugsDataSet : global::System.Data.DataSet {
+    public partial class GenericDataSet : global::System.Data.DataSet {
         
-        private DrugMedicamentsDataTable tableDrugMedicaments;
+        private GenericMedicamentsDataTable tableGenericMedicaments;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DrugsDataSet() {
+        public GenericDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PharmacyApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DrugsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GenericDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PharmacyApp {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DrugMedicaments"] != null)) {
-                    base.Tables.Add(new DrugMedicamentsDataTable(ds.Tables["DrugMedicaments"]));
+                if ((ds.Tables["GenericMedicaments"] != null)) {
+                    base.Tables.Add(new GenericMedicamentsDataTable(ds.Tables["GenericMedicaments"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PharmacyApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DrugMedicamentsDataTable DrugMedicaments {
+        public GenericMedicamentsDataTable GenericMedicaments {
             get {
-                return this.tableDrugMedicaments;
+                return this.tableGenericMedicaments;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PharmacyApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DrugsDataSet cln = ((DrugsDataSet)(base.Clone()));
+            GenericDataSet cln = ((GenericDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PharmacyApp {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DrugMedicaments"] != null)) {
-                    base.Tables.Add(new DrugMedicamentsDataTable(ds.Tables["DrugMedicaments"]));
+                if ((ds.Tables["GenericMedicaments"] != null)) {
+                    base.Tables.Add(new GenericMedicamentsDataTable(ds.Tables["GenericMedicaments"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PharmacyApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDrugMedicaments = ((DrugMedicamentsDataTable)(base.Tables["DrugMedicaments"]));
+            this.tableGenericMedicaments = ((GenericMedicamentsDataTable)(base.Tables["GenericMedicaments"]));
             if ((initTable == true)) {
-                if ((this.tableDrugMedicaments != null)) {
-                    this.tableDrugMedicaments.InitVars();
+                if ((this.tableGenericMedicaments != null)) {
+                    this.tableGenericMedicaments.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PharmacyApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DrugsDataSet";
+            this.DataSetName = "GenericDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DrugsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/GenericDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDrugMedicaments = new DrugMedicamentsDataTable();
-            base.Tables.Add(this.tableDrugMedicaments);
+            this.tableGenericMedicaments = new GenericMedicamentsDataTable();
+            base.Tables.Add(this.tableGenericMedicaments);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDrugMedicaments() {
+        private bool ShouldSerializeGenericMedicaments() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PharmacyApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DrugsDataSet ds = new DrugsDataSet();
+            GenericDataSet ds = new GenericDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,23 @@ namespace PharmacyApp {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DrugMedicamentsRowChangeEventHandler(object sender, DrugMedicamentsRowChangeEvent e);
+        public delegate void GenericMedicamentsRowChangeEventHandler(object sender, GenericMedicamentsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DrugMedicamentsDataTable : global::System.Data.TypedTableBase<DrugMedicamentsRow> {
+        public partial class GenericMedicamentsDataTable : global::System.Data.TypedTableBase<GenericMedicamentsRow> {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnTradeName;
-            
-            private global::System.Data.DataColumn columnGenericId;
-            
-            private global::System.Data.DataColumn columnMeasure;
-            
-            private global::System.Data.DataColumn columnPackingContent;
+            private global::System.Data.DataColumn columnName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsDataTable() {
-                this.TableName = "DrugMedicaments";
+            public GenericMedicamentsDataTable() {
+                this.TableName = "GenericMedicaments";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +294,7 @@ namespace PharmacyApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DrugMedicamentsDataTable(global::System.Data.DataTable table) {
+            internal GenericMedicamentsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +311,7 @@ namespace PharmacyApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DrugMedicamentsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GenericMedicamentsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -332,33 +326,9 @@ namespace PharmacyApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TradeNameColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnTradeName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GenericIdColumn {
-                get {
-                    return this.columnGenericId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MeasureColumn {
-                get {
-                    return this.columnMeasure;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PackingContentColumn {
-                get {
-                    return this.columnPackingContent;
+                    return this.columnName;
                 }
             }
             
@@ -373,56 +343,53 @@ namespace PharmacyApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRow this[int index] {
+            public GenericMedicamentsRow this[int index] {
                 get {
-                    return ((DrugMedicamentsRow)(this.Rows[index]));
+                    return ((GenericMedicamentsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DrugMedicamentsRowChangeEventHandler DrugMedicamentsRowChanging;
+            public event GenericMedicamentsRowChangeEventHandler GenericMedicamentsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DrugMedicamentsRowChangeEventHandler DrugMedicamentsRowChanged;
+            public event GenericMedicamentsRowChangeEventHandler GenericMedicamentsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DrugMedicamentsRowChangeEventHandler DrugMedicamentsRowDeleting;
+            public event GenericMedicamentsRowChangeEventHandler GenericMedicamentsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DrugMedicamentsRowChangeEventHandler DrugMedicamentsRowDeleted;
+            public event GenericMedicamentsRowChangeEventHandler GenericMedicamentsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDrugMedicamentsRow(DrugMedicamentsRow row) {
+            public void AddGenericMedicamentsRow(GenericMedicamentsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRow AddDrugMedicamentsRow(string TradeName, int GenericId, string Measure, string PackingContent) {
-                DrugMedicamentsRow rowDrugMedicamentsRow = ((DrugMedicamentsRow)(this.NewRow()));
+            public GenericMedicamentsRow AddGenericMedicamentsRow(string Name) {
+                GenericMedicamentsRow rowGenericMedicamentsRow = ((GenericMedicamentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        TradeName,
-                        GenericId,
-                        Measure,
-                        PackingContent};
-                rowDrugMedicamentsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDrugMedicamentsRow);
-                return rowDrugMedicamentsRow;
+                        Name};
+                rowGenericMedicamentsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGenericMedicamentsRow);
+                return rowGenericMedicamentsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRow FindById(int Id) {
-                return ((DrugMedicamentsRow)(this.Rows.Find(new object[] {
+            public GenericMedicamentsRow FindById(int Id) {
+                return ((GenericMedicamentsRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DrugMedicamentsDataTable cln = ((DrugMedicamentsDataTable)(base.Clone()));
+                GenericMedicamentsDataTable cln = ((GenericMedicamentsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,17 +397,14 @@ namespace PharmacyApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DrugMedicamentsDataTable();
+                return new GenericMedicamentsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnTradeName = base.Columns["TradeName"];
-                this.columnGenericId = base.Columns["GenericId"];
-                this.columnMeasure = base.Columns["Measure"];
-                this.columnPackingContent = base.Columns["PackingContent"];
+                this.columnName = base.Columns["Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -448,14 +412,8 @@ namespace PharmacyApp {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnTradeName = new global::System.Data.DataColumn("TradeName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTradeName);
-                this.columnGenericId = new global::System.Data.DataColumn("GenericId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGenericId);
-                this.columnMeasure = new global::System.Data.DataColumn("Measure", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMeasure);
-                this.columnPackingContent = new global::System.Data.DataColumn("PackingContent", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPackingContent);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -464,36 +422,33 @@ namespace PharmacyApp {
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
-                this.columnTradeName.MaxLength = 2147483647;
-                this.columnGenericId.AllowDBNull = false;
-                this.columnMeasure.MaxLength = 2147483647;
-                this.columnPackingContent.MaxLength = 2147483647;
+                this.columnName.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRow NewDrugMedicamentsRow() {
-                return ((DrugMedicamentsRow)(this.NewRow()));
+            public GenericMedicamentsRow NewGenericMedicamentsRow() {
+                return ((GenericMedicamentsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DrugMedicamentsRow(builder);
+                return new GenericMedicamentsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DrugMedicamentsRow);
+                return typeof(GenericMedicamentsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DrugMedicamentsRowChanged != null)) {
-                    this.DrugMedicamentsRowChanged(this, new DrugMedicamentsRowChangeEvent(((DrugMedicamentsRow)(e.Row)), e.Action));
+                if ((this.GenericMedicamentsRowChanged != null)) {
+                    this.GenericMedicamentsRowChanged(this, new GenericMedicamentsRowChangeEvent(((GenericMedicamentsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -501,8 +456,8 @@ namespace PharmacyApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DrugMedicamentsRowChanging != null)) {
-                    this.DrugMedicamentsRowChanging(this, new DrugMedicamentsRowChangeEvent(((DrugMedicamentsRow)(e.Row)), e.Action));
+                if ((this.GenericMedicamentsRowChanging != null)) {
+                    this.GenericMedicamentsRowChanging(this, new GenericMedicamentsRowChangeEvent(((GenericMedicamentsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -510,8 +465,8 @@ namespace PharmacyApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DrugMedicamentsRowDeleted != null)) {
-                    this.DrugMedicamentsRowDeleted(this, new DrugMedicamentsRowChangeEvent(((DrugMedicamentsRow)(e.Row)), e.Action));
+                if ((this.GenericMedicamentsRowDeleted != null)) {
+                    this.GenericMedicamentsRowDeleted(this, new GenericMedicamentsRowChangeEvent(((GenericMedicamentsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -519,14 +474,14 @@ namespace PharmacyApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DrugMedicamentsRowDeleting != null)) {
-                    this.DrugMedicamentsRowDeleting(this, new DrugMedicamentsRowChangeEvent(((DrugMedicamentsRow)(e.Row)), e.Action));
+                if ((this.GenericMedicamentsRowDeleting != null)) {
+                    this.GenericMedicamentsRowDeleting(this, new GenericMedicamentsRowChangeEvent(((GenericMedicamentsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDrugMedicamentsRow(DrugMedicamentsRow row) {
+            public void RemoveGenericMedicamentsRow(GenericMedicamentsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -535,7 +490,7 @@ namespace PharmacyApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DrugsDataSet ds = new DrugsDataSet();
+                GenericDataSet ds = new GenericDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -553,7 +508,7 @@ namespace PharmacyApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DrugMedicamentsDataTable";
+                attribute2.FixedValue = "GenericMedicamentsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -597,121 +552,54 @@ namespace PharmacyApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DrugMedicamentsRow : global::System.Data.DataRow {
+        public partial class GenericMedicamentsRow : global::System.Data.DataRow {
             
-            private DrugMedicamentsDataTable tableDrugMedicaments;
+            private GenericMedicamentsDataTable tableGenericMedicaments;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DrugMedicamentsRow(global::System.Data.DataRowBuilder rb) : 
+            internal GenericMedicamentsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDrugMedicaments = ((DrugMedicamentsDataTable)(this.Table));
+                this.tableGenericMedicaments = ((GenericMedicamentsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableDrugMedicaments.IdColumn]));
+                    return ((int)(this[this.tableGenericMedicaments.IdColumn]));
                 }
                 set {
-                    this[this.tableDrugMedicaments.IdColumn] = value;
+                    this[this.tableGenericMedicaments.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string TradeName {
+            public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tableDrugMedicaments.TradeNameColumn]));
+                        return ((string)(this[this.tableGenericMedicaments.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TradeName\' in table \'DrugMedicaments\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'GenericMedicaments\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDrugMedicaments.TradeNameColumn] = value;
+                    this[this.tableGenericMedicaments.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int GenericId {
-                get {
-                    return ((int)(this[this.tableDrugMedicaments.GenericIdColumn]));
-                }
-                set {
-                    this[this.tableDrugMedicaments.GenericIdColumn] = value;
-                }
+            public bool IsNameNull() {
+                return this.IsNull(this.tableGenericMedicaments.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Measure {
-                get {
-                    try {
-                        return ((string)(this[this.tableDrugMedicaments.MeasureColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Measure\' in table \'DrugMedicaments\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDrugMedicaments.MeasureColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PackingContent {
-                get {
-                    try {
-                        return ((string)(this[this.tableDrugMedicaments.PackingContentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PackingContent\' in table \'DrugMedicaments\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDrugMedicaments.PackingContentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTradeNameNull() {
-                return this.IsNull(this.tableDrugMedicaments.TradeNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTradeNameNull() {
-                this[this.tableDrugMedicaments.TradeNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMeasureNull() {
-                return this.IsNull(this.tableDrugMedicaments.MeasureColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMeasureNull() {
-                this[this.tableDrugMedicaments.MeasureColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPackingContentNull() {
-                return this.IsNull(this.tableDrugMedicaments.PackingContentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPackingContentNull() {
-                this[this.tableDrugMedicaments.PackingContentColumn] = global::System.Convert.DBNull;
+            public void SetNameNull() {
+                this[this.tableGenericMedicaments.NameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -719,22 +607,22 @@ namespace PharmacyApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DrugMedicamentsRowChangeEvent : global::System.EventArgs {
+        public class GenericMedicamentsRowChangeEvent : global::System.EventArgs {
             
-            private DrugMedicamentsRow eventRow;
+            private GenericMedicamentsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRowChangeEvent(DrugMedicamentsRow row, global::System.Data.DataRowAction action) {
+            public GenericMedicamentsRowChangeEvent(GenericMedicamentsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DrugMedicamentsRow Row {
+            public GenericMedicamentsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -750,7 +638,7 @@ namespace PharmacyApp {
         }
     }
 }
-namespace PharmacyApp.DrugsDataSetTableAdapters {
+namespace PharmacyApp.DataSets.GenericDataSetTableAdapters {
     
     
     /// <summary>
@@ -762,7 +650,7 @@ namespace PharmacyApp.DrugsDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DrugMedicamentsTableAdapter : global::System.ComponentModel.Component {
+    public partial class GenericMedicamentsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -776,7 +664,7 @@ namespace PharmacyApp.DrugsDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DrugMedicamentsTableAdapter() {
+        public GenericMedicamentsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -873,40 +761,28 @@ namespace PharmacyApp.DrugsDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DrugMedicaments";
+            tableMapping.DataSetTable = "GenericMedicaments";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("TradeName", "TradeName");
-            tableMapping.ColumnMappings.Add("GenericId", "GenericId");
-            tableMapping.ColumnMappings.Add("Measure", "Measure");
-            tableMapping.ColumnMappings.Add("PackingContent", "PackingContent");
+            tableMapping.ColumnMappings.Add("Name", "Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[DrugMedicaments] WHERE (([Id] = @Original_Id) AND ([GenericId]" +
-                " = @Original_GenericId))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[GenericMedicaments] WHERE (([Id] = @Original_Id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GenericId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GenericId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DrugMedicaments] ([TradeName], [GenericId], [Measure], [PackingContent]) VALUES (@TradeName, @GenericId, @Measure, @PackingContent);
-SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GenericMedicaments] ([Name]) VALUES (@Name);\r\nSELECT Id, Name " +
+                "FROM GenericMedicaments WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TradeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TradeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GenericId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GenericId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Measure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Measure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PackingContent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackingContent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DrugMedicaments] SET [TradeName] = @TradeName, [GenericId] = @GenericId, [Measure] = @Measure, [PackingContent] = @PackingContent WHERE (([Id] = @Original_Id) AND ([GenericId] = @Original_GenericId));
-SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[GenericMedicaments] SET [Name] = @Name WHERE (([Id] = @Original_Id)" +
+                ");\r\nSELECT Id, Name FROM GenericMedicaments WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TradeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TradeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GenericId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GenericId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Measure", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Measure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PackingContent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PackingContent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GenericId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GenericId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -923,8 +799,7 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, TradeName, GenericId, Measure, PackingContent FROM dbo.DrugMedicaments" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.GenericMedicaments";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -932,7 +807,7 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DrugsDataSet.DrugMedicamentsDataTable dataTable) {
+        public virtual int Fill(GenericDataSet.GenericMedicamentsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -945,9 +820,9 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DrugsDataSet.DrugMedicamentsDataTable GetData() {
+        public virtual GenericDataSet.GenericMedicamentsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DrugsDataSet.DrugMedicamentsDataTable dataTable = new DrugsDataSet.DrugMedicamentsDataTable();
+            GenericDataSet.GenericMedicamentsDataTable dataTable = new GenericDataSet.GenericMedicamentsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -955,15 +830,15 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DrugsDataSet.DrugMedicamentsDataTable dataTable) {
+        public virtual int Update(GenericDataSet.GenericMedicamentsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DrugsDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DrugMedicaments");
+        public virtual int Update(GenericDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "GenericMedicaments");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -985,9 +860,8 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_GenericId) {
+        public virtual int Delete(int Original_Id) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_GenericId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1008,25 +882,12 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string TradeName, int GenericId, string Measure, string PackingContent) {
-            if ((TradeName == null)) {
+        public virtual int Insert(string Name) {
+            if ((Name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(TradeName));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GenericId));
-            if ((Measure == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Measure));
-            }
-            if ((PackingContent == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PackingContent));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1048,29 +909,15 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string TradeName, int GenericId, string Measure, string PackingContent, int Original_Id, int Original_GenericId, int Id) {
-            if ((TradeName == null)) {
+        public virtual int Update(string Name, int Original_Id, int Id) {
+            if ((Name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(TradeName));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GenericId));
-            if ((Measure == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Measure));
-            }
-            if ((PackingContent == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PackingContent));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_GenericId));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1091,8 +938,8 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string TradeName, int GenericId, string Measure, string PackingContent, int Original_Id, int Original_GenericId) {
-            return this.Update(TradeName, GenericId, Measure, PackingContent, Original_Id, Original_GenericId, Original_Id);
+        public virtual int Update(string Name, int Original_Id) {
+            return this.Update(Name, Original_Id, Original_Id);
         }
     }
     
@@ -1108,7 +955,7 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         
         private UpdateOrderOption _updateOrder;
         
-        private DrugMedicamentsTableAdapter _drugMedicamentsTableAdapter;
+        private GenericMedicamentsTableAdapter _genericMedicamentsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1130,12 +977,12 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DrugMedicamentsTableAdapter DrugMedicamentsTableAdapter {
+        public GenericMedicamentsTableAdapter GenericMedicamentsTableAdapter {
             get {
-                return this._drugMedicamentsTableAdapter;
+                return this._genericMedicamentsTableAdapter;
             }
             set {
-                this._drugMedicamentsTableAdapter = value;
+                this._genericMedicamentsTableAdapter = value;
             }
         }
         
@@ -1158,9 +1005,9 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._drugMedicamentsTableAdapter != null) 
-                            && (this._drugMedicamentsTableAdapter.Connection != null))) {
-                    return this._drugMedicamentsTableAdapter.Connection;
+                if (((this._genericMedicamentsTableAdapter != null) 
+                            && (this._genericMedicamentsTableAdapter.Connection != null))) {
+                    return this._genericMedicamentsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1175,7 +1022,7 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._drugMedicamentsTableAdapter != null)) {
+                if ((this._genericMedicamentsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1187,14 +1034,14 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DrugsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GenericDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._drugMedicamentsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DrugMedicaments.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._genericMedicamentsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GenericMedicaments.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._drugMedicamentsTableAdapter.Update(updatedRows));
+                    result = (result + this._genericMedicamentsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1206,13 +1053,13 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DrugsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GenericDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._drugMedicamentsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DrugMedicaments.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._genericMedicamentsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GenericMedicaments.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._drugMedicamentsTableAdapter.Update(addedRows));
+                    result = (result + this._genericMedicamentsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1224,13 +1071,13 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DrugsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GenericDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._drugMedicamentsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DrugMedicaments.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._genericMedicamentsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GenericMedicaments.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._drugMedicamentsTableAdapter.Update(deletedRows));
+                    result = (result + this._genericMedicamentsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1266,15 +1113,15 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DrugsDataSet dataSet) {
+        public virtual int UpdateAll(GenericDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._drugMedicamentsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._drugMedicamentsTableAdapter.Connection) == false))) {
+            if (((this._genericMedicamentsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._genericMedicamentsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1310,13 +1157,13 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._drugMedicamentsTableAdapter != null)) {
-                    revertConnections.Add(this._drugMedicamentsTableAdapter, this._drugMedicamentsTableAdapter.Connection);
-                    this._drugMedicamentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._drugMedicamentsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._drugMedicamentsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._drugMedicamentsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._drugMedicamentsTableAdapter.Adapter);
+                if ((this._genericMedicamentsTableAdapter != null)) {
+                    revertConnections.Add(this._genericMedicamentsTableAdapter, this._genericMedicamentsTableAdapter.Connection);
+                    this._genericMedicamentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._genericMedicamentsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._genericMedicamentsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._genericMedicamentsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._genericMedicamentsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1377,9 +1224,9 @@ SELECT Id, TradeName, GenericId, Measure, PackingContent FROM DrugMedicaments WH
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._drugMedicamentsTableAdapter != null)) {
-                    this._drugMedicamentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._drugMedicamentsTableAdapter]));
-                    this._drugMedicamentsTableAdapter.Transaction = null;
+                if ((this._genericMedicamentsTableAdapter != null)) {
+                    this._genericMedicamentsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._genericMedicamentsTableAdapter]));
+                    this._genericMedicamentsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

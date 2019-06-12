@@ -191,25 +191,36 @@
         8l/FYwIYQ4UGBWBgAAC+0b+zuQxOnAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="toolStripButtonExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAENSURBVFhH7ZQ7CsJAFEVjK6ho4WcV7sFdWCuCnZW4EBEs
+        dTUW2gkWYiFYCXZ24ufemCcpXkKIb0BhDhw0Y2COM5MEHo9CAVYdWISZqMOnA6cwExJwgwcDzzBXwDG8
+        +p4e9AEmAWU4g5XwSqcPO++vH8wClpDjK6hFDOADXmGTAxFmARzfQv62gTUocJI7ZMCQAzFMz4AWkTY5
+        MQ0gXN4d5D17yIkZwP3XMA8gLXiCvI+OYBJOAmTZJWAN+b7XMA+Q086AMZTtSHo6TAPkn8cPXAPKwdRW
+        wixAm1xIizALmMC0086Dye1wFkDa0WcSfESdbUFe/jfgAvnIfesC5gqwNnNACc4d2IUez68RBC9bQM07
+        YzvM3QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="drugsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>197, 17</value>
+  </metadata>
+  <metadata name="genericMedicamentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>326, 47</value>
+  </metadata>
+  <metadata name="genericMedicamentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>326, 47</value>
+  </metadata>
+  <metadata name="genericDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 48</value>
+  </metadata>
+  <metadata name="genericDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 48</value>
   </metadata>
   <metadata name="drugMedicamentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>552, 17</value>
   </metadata>
-  <metadata name="genericDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>175, 48</value>
-  </metadata>
-  <metadata name="genericMedicamentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>326, 47</value>
-  </metadata>
-  <metadata name="genericDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>175, 48</value>
-  </metadata>
   <metadata name="genericMedicamentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>560, 46</value>
-  </metadata>
-  <metadata name="genericMedicamentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>326, 47</value>
   </metadata>
 </root>
