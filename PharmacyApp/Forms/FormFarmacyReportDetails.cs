@@ -10,20 +10,26 @@ using System.Windows.Forms;
 
 namespace PharmacyApp.Forms
 {
-    public partial class FormDrugsReport : Form
+    public partial class FormFarmacyReportDetails : Form
     {
-        public FormDrugsReport()
+        public FormFarmacyReportDetails()
         {
             InitializeComponent();
         }
 
-        private void FormDrugsReport_Load(object sender, EventArgs e)
+        private void purchasedAndSoldDrugsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'drugsReportDataSet1.DrugMedicaments' table. You can move, or remove it, as needed.
-            this.drugMedicamentsTableAdapter.Fill(this.drugsReportDataSet1.DrugMedicaments);
+            this.Validate();
+            this.purchasedAndSoldDrugsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.drugsReportDataSet);
+
+        }
+
+        private void FormFarmacyReportDetails_Load(object sender, EventArgs e)
+        {
             // TODO: This line of code loads data into the 'drugsReportDataSet.PurchasedAndSoldDrugs' table. You can move, or remove it, as needed.
             this.purchasedAndSoldDrugsTableAdapter.Fill(this.drugsReportDataSet.PurchasedAndSoldDrugs);
-            
+
         }
     }
 }
